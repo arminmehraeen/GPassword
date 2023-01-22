@@ -22,7 +22,8 @@ import 'package:bmi/bmi.dart';
 ## Usage
 
 ```dart
-coming soon 
+GPassword gPassword = GPassword();
+List passwords = gPassword.generate();
 ```
 
 ## Additional information

@@ -20,7 +20,7 @@ class GPassword {
 
   String get _concat => _upperWords + _lowerWords + _numbers + _symbols;
 
-  bool checkPassword({required String password}) {
+  bool passwordStatus({required String password}) {
     if (password.length < 6) return false;
     RegExp regExp = RegExp(
       r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$",

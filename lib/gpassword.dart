@@ -20,6 +20,16 @@ class GPassword {
 
   String get _concat => _upperWords + _lowerWords + _numbers + _symbols;
 
+  bool checkPassword({required String password}) {
+    if (password.length < 6) return false;
+    RegExp regExp = RegExp(
+      r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$",
+      caseSensitive: false,
+      multiLine: false,
+    );
+    return regExp.hasMatch(password);
+  }
+
   String _compute({required int passLength}) {
     String password = '';
     List<String> list = _concat.split('').toList();

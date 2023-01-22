@@ -10,10 +10,13 @@ class GPassword {
   static const String _numbers = '1234567890';
   static const String _symbols = '!@#&';
 
-  List<String> generate({int passwordLength = _passwordLength}) =>
+  List<String> generateList({int passwordLength = _passwordLength}) =>
       List.generate(
               _passwordCount, (index) => _compute(passLength: passwordLength))
           .toList();
+
+  String generate({int passwordLength = _passwordLength}) =>
+      _compute(passLength: passwordLength);
 
   String get _concat => _upperWords + _lowerWords + _numbers + _symbols;
 

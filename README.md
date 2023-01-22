@@ -25,7 +25,7 @@ import 'package:gpassword/gpassword.dart';
 GPassword gPassword = GPassword();
 
 List<String> passwords = gPassword.generateList();
-String password = gPassword.generate();
+String password = gPassword.generate(passwordLength: 8);
 
 bool passwordStatus = gPassword.passwordStatus(password: "Password@1234");
 ```

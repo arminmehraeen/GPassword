@@ -23,7 +23,8 @@ import 'package:gpassword/gpassword.dart';
 
 ```dart
 GPassword gPassword = GPassword();
-List<String> passwords = gPassword.generate();
+List<String> passwords = gPassword.generateList();
+String password = gPassword.generate();
 ```
 
 ## Additional information

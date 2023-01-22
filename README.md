@@ -16,14 +16,14 @@ dependencies:
 ```
 
 ```dart
-import 'package:bmi/bmi.dart';
+import 'package:gpassword/gpassword.dart';
 ```
 
 ## Usage
 
 ```dart
 GPassword gPassword = GPassword();
-List passwords = gPassword.generate();
+List<String> passwords = gPassword.generate();
 ```
 
 ## Additional information

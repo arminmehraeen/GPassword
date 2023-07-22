@@ -1,5 +1,7 @@
+import 'dart:convert';
 import 'dart:math';
 
+import 'package:crypto/crypto.dart';
 import 'package:gpassword/src/utils/constants.dart';
 
 class GPassword {
@@ -14,11 +16,17 @@ class GPassword {
   bool passwordIsSecure({required String password}) {
     if (password.length < 6) return false;
     RegExp regExp = RegExp(
-      r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%*?&])[A-Za-z\d@!%*?&]{8,}$",
+      Constants.regex,
       caseSensitive: false,
       multiLine: false,
     );
     return regExp.hasMatch(password);
+  }
+
+  String encryptPassword({required String password}) {
+    final bytes = utf8.encode(password);
+    final hash = sha256.convert(bytes);
+    return hash.toString();
   }
 
   String _generatePassword({required int passLength}) {

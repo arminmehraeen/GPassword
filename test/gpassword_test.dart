@@ -2,11 +2,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gpassword/gpassword.dart';
 
 void main() {
-  test('adds one to input values', () {
+  test('App testing', () {
     GPassword gPassword = GPassword();
     String password = gPassword.generate();
-    print("Password => $password");
     bool isSecure = gPassword.passwordIsSecure(password: password);
-    print("Password is secure => $isSecure");
+    String encryptPassword = gPassword.encryptPassword(password: password);
+    expect(isSecure, true);
   });
 }

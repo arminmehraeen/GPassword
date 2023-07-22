@@ -27,7 +27,8 @@ GPassword gPassword = GPassword();
 List<String> passwords = gPassword.generateList();
 String password = gPassword.generate(passwordLength: 8);
 // Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:
-bool passwordStatus = gPassword.passwordIsSecure(password: "Password@1234");
+bool passwordStatus = gPassword.passwordIsSecure(password: password);
+String encryptPassword = gPassword.encryptPassword(password: password);
 ```
 
 ## Additional information

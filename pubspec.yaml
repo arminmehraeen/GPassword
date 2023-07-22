@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  crypto:
 
 dev_dependencies:
   flutter_test:

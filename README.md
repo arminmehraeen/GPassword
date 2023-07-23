@@ -11,8 +11,7 @@ This will add a line like this to your package's pubspec.yaml ( run an implicit 
 ```dart
 dependencies:
   gpassword:
-    git:
-      url: https://github.com/arminmehraeen/GPassword.git
+    git: https://github.com/arminmehraeen/GPassword.git
 ```
 
 ```dart

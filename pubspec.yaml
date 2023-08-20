@@ -1,5 +1,5 @@
 name: gpassword
-description: A new Flutter package project.
+description: Password Generator Flutter Package
 version: 0.0.1
 homepage: https://github.com/arminmehraeen/GPassword
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  crypto:
+  crypto: ^3.0.0
 
 dev_dependencies:
   flutter_test:

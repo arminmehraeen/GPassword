@@ -1,3 +1,3 @@
 ## 0.0.1
 
-Password Generator Flutter Package
+Password generator flutter package 

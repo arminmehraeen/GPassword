@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:crypto/crypto.dart';
-import 'package:collection/collection.dart';
 import 'package:gpassword/src/utils/constants.dart';
 
 /// A class that provides password generation, validation, and security features.
